@@ -3,10 +3,9 @@
 }*,
 *:before,
 *:after {
-  margin: 0;
-	padding: 0;
-  box-sizing: border-box;
-  font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
@@ -15,8 +14,9 @@
 }
 .logo {
   font-size: calc(120% + 1vw);
-  line-height: 44px;
+  line-height: 200px;
   font-weight: bold;
+  float: left;
 }
 .nav-link {
   font-size: 19px;
@@ -27,8 +27,34 @@
   margin: 0 15px;
 }
 .logo img {
-  height: 44px;
+  height: 300px;
   display: inherit;
+  margin-top: -120px;
+  margin-left: -80px;
+  margin-right: 80px;
+  float: left;
+}
+
+.login-btn {
+  color: #00b386;
+  font-weight: bold;
+  margin-left: 90px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-btn {
+  background-color: #00b386; 
+  font-weight: bold;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #009e75;
 }
 /*Text*/
 .heading {
@@ -38,7 +64,7 @@
 .heading-sml {
   font-size: 36px;
   line-height: 1.38;
-	font-weight: bold;
+  font-weight: bold;
 }
 .heading-lrg {
   font-size: 56px;
@@ -160,18 +186,17 @@ img {
 
 /*button*/
 .button {
-	display: inline-block;
-	padding: 15px 20px;
+  display: inline-block;
+  padding: 15px 20px;
   border-radius: 3px;
   font-size: 15px;
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
   text-decoration: none;
   background: white;
-	color: black;
+  color: black;
   white-space: nowrap;
-	border: none;
-	-webkit-appearance: none;
-	cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 .button__full {
 	width: 100%;
@@ -198,7 +223,7 @@ img {
 .mask {
 	overflow: hidden;
 	position: relative;
-  background: white;
+    background: white;
 }
 .mailchimp {
 	border: 15px solid white;
@@ -228,7 +253,7 @@ img {
 	background-position: center;
 	background-size: cover;
 }
-/*Team and footer social icons*/
+
 .socialicons {
   width: 30px;
   height: 30px;
@@ -348,7 +373,6 @@ img {
 }
 .slideshow-item {
 	position: absolute;
-	visbility: hidden;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -363,7 +387,6 @@ img {
 }
 .slideshow-bullet:checked + .slideshow-item {
 	position: relative;
-	visbility: visible;
 	z-index: 2;
 	height: initial;
 }
@@ -471,14 +494,14 @@ img {
   margin: auto;
 }.icon {
   width: 64px;
-	height: 64px;
+  height: 64px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-	background: rgba(34, 126, 247, .07);
-	margin-bottom: 20px;
+  background: rgba(34, 126, 247, .07);
+  margin-bottom: 20px;
 }
 .icon svg {
   width: 100%;
