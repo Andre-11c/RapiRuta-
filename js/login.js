@@ -1,0 +1,1 @@
+js document.getElementById("loginForm").addEventListener("submit", e => { e.preventDefault(); const email = document.getElementById("email").value.trim(); const pass = document.getElementById("password").value; if (email === "test@demo.com" && pass === "123456") { alert("¡Bienvenido!"); } else { document.getElementById("errorMsg").hidden = false; } });
