@@ -50,68 +50,6 @@
 .custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .secondary-color { color: #D7F9FF }
 .custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .svg-fill { fill: #717171 }
             </style>
-<style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    section.registro {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #2e3b69;
-    }
-
-    .registro-container {
-      text-align: center;
-      max-width: 400px;
-      width: 100%;
-    }
-
-    h2 {
-      color: white;
-      font-size: 40px;
-      margin-bottom: 30px;
-    }
-
-    .registro-container input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    .registro-container button {
-      width: 100%;
-      padding: 12px;
-      background-color: #00b386;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 2px 2px 2px black;
-      cursor: pointer;
-    }
-
-    .registro-container button:hover {
-      background-color: #009e75;
-    }
-
-    .login-link {
-      margin-top: 15px;
-      color: #00b386;
-      font-weight: bold;
-      font-size: 14px;
-      display: block;
-    }
-  </style>
   </head>
 
   <body class="font-friendly">
@@ -123,17 +61,38 @@
           </div>
         </div>
       </header>
-      <section class="registro">
-  <div class="registro-container">
-    <h2>Registrarse</h2>
-    <input type="text" placeholder="Nombre completo">
-    <input type="email" placeholder="Correo electrónico">
-    <input type="text" placeholder="Nombre de usuario">
-    <input type="password" placeholder="Contraseña">
-    <button>Crear cuenta</button>
-    <a href="#" class="login-link">¿Ya tienes cuenta? Inicia Sesión</a>
+  <section class="alarma-section">
+  <div class="alarma-container">
+    <div class="alarma-header">
+      <span class="alarma-user">🔴 Bienvenido Leonardo</span>
+      <span class="alarma-icon">🔔</span>
+    </div>
+
+    <div class="alarma-info">
+      <h2>Alarma dentro<br>de 6 horas</h2>
+      <p>lun, 9 de jun, 12:00 p. m.</p>
+    </div>
+
+    <div class="alarma-preferencia">
+      <h3>¿Qué medio de transporte usas?</h3>
+      <div class="alarma-checkboxes">
+        <label><input type="checkbox" checked> Bus Local</label>
+        <label><input type="checkbox" checked> Corredores</label>
+        <label><input type="checkbox" checked> Metropolitano</label>
+      </div>
+    </div>
+
+    <div class="alarma-noticias">
+      <h3>Noticias</h3>
+      <div class="alarma-noticia">
+        <img src="assets/images/news.jpg" alt="Noticia">
+        <p>
+          Durante la Feria del Sol, la carretera principal se congestionó por turistas. Autoridades recomiendan rutas alternas y conducir con precaución para evitar retrasos.
+        </p>
+      </div>
+    </div>
   </div>
-    </section>
+</section>
     <footer id="footer-13" class="section text-center" sitemeta="[object Object]" activepage="Landing">
       <div class="container col-12">
         <nav class="mb50"><a target="_blank" href="" class="nav-link secondary-color"></a></nav>
