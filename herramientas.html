@@ -61,19 +61,19 @@
     <div class="custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9">
       <header class="header">
         <div class="container-lrg">
-          <div class="flex"><a class="logo logo__white"><img src="assets/images/gridlogo.png" alt="RappiRutaLogo"></a> <a href="#main-menu" id="menu" class="menu-toggle"><b class="nav-link mr0 secondary-color">☰</b></a>
-            <nav id="main-menu" role="navigation" class="main-menu"><a href="#" id="main-menu-close" class="menu-close"><span class="bold">✕</span></a> <a href="index.html" class="nav-link secondary-color">Inicio</a> <a href="rutas.html" class="nav-link secondary-color">Rutas</a> <a href="herramientas.html" class="nav-link secondary-color">Herramientas</a><a href="login.html" class="nav-link login-btn">Iniciar sesión</a><a href="register.html" class="nav-link secondary-color register-btn">Registrarse</a></nav>
+          <div class="flex"><a href= "index.html" class="logo logo__white"><img src="assets/images/gridlogo.png" alt="RappiRutaLogo"></a> <a href="#main-menu" id="menu" class="menu-toggle"><b class="nav-link mr0 secondary-color">☰</b></a>
+            <nav id="main-menu" role="navigation" class="main-menu"><a href="#" id="main-menu-close" class="menu-close"><span class="bold">✕</span></a> <a href="inicio.html" class="nav-link secondary-color">Inicio</a> <a href="rutas.html" class="nav-link secondary-color">Rutas</a> <a href="herramientas.html" class="nav-link secondary-color">Herramientas</a><a href="ajustes.html" class="nav-link secondary-color">Ajustes</a><a href="login.html" class="nav-link login-btn">Iniciar sesión</a><a href="register.html" class="nav-link secondary-color register-btn">Registrarse</a></nav>
           </div>
         </div>
       </header>
-      <section id="feature-6" class="section" sitemeta="[object Object]" activepage="Landing">
-      <div class="container">
-        <div class="col-12 text-center flex flex-column center-horizontal">
-        <h2 class="heading primary-color">Agregar Horario</h2>
-          <form class="formulario-horario">
-        <input type="text" placeholder="Nombre del horario" required>
-        <input type="time" required>
-        <select required>
+      <section class="horario-section">
+  <div class="horario-container">
+    <h2 class="horario-heading">Agregar Horario</h2>
+    
+    <form class="horario-form">
+      <input type="text" placeholder="Nombre del horario" required>
+      <input type="time" required>
+      <select required>
         <option value="" disabled selected>Día</option>
         <option>Lunes</option>
         <option>Martes</option>
@@ -82,45 +82,82 @@
         <option>Viernes</option>
         <option>Sábado</option>
         <option>Domingo</option>
-        </select>
-        <button type="submit">Agregar</button>
-            </form>
+      </select>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <div class="horario-filter">
+      <label for="filtro-ruta">Filtrar por ruta:</label>
+      <select id="filtro-ruta">
+        <option value="todas">Todas</option>
+        <option value="ruta1">Ruta 1</option>
+        <option value="ruta2">Ruta 2</option>
+        <option value="ruta3">Ruta 3</option>
+      </select>
+    </div>
+
+    <h2 class="horario-heading">Horario Semanal</h2>
+    <div class="horario-grid">
+      <div class="horario-dia">
+        <h3>Lunes</h3>
+        <p>08:00 - IHC</p>
+        <p>10:00 - Taller</p>
+        <div class="horario-actions">
+          <a href="#" class="horario-btn">Ver Rutas</a>
+          <a href="#" class="horario-btn editar">Editar</a>
+        </div>
       </div>
-      <h2 class="heading primary-color">Horario Semanal</h2>
-  <div class="tablero">
-    <div class="dia">
-      <h3>Lunes</h3>
-      <p>08:00 - IHC</p>
-      <p>10:00 - Taller</p>
-      <a href="#" class="btn-rutas">Ver Rutas Disponibles</a>
-    </div>
-    <div class="dia">
-      <h3>Martes</h3>
-      <p>09:00 - Fisica I</p>
-      <a href="#" class="btn-rutas">Ver Rutas Disponibles</a>
-    </div>
-    <div class="dia">
-      <h3>Miércoles</h3>
-      <p>14:00 - Calculo</p>
-      <a href="#" class="btn-rutas">Ver Rutas Disponibles</a>
-    </div>
-    <div class="dia">
-      <h3>Jueves</h3>
-    </div>
-    <div class="dia">
-      <h3>Viernes</h3>
-      <p>08:00 - IHC</p>
-      <a href="#" class="btn-rutas">Ver Rutas Disponibles</a>
-    </div>
-    <div class="dia">
-      <h3>Sábado</h3>
-    </div>
-    <div class="dia">
-      <h3>Domingo</h3>
-      <p></p>
+      <div class="horario-dia">
+        <h3>Martes</h3>
+        <p>09:00 - Física I</p>
+        <div class="horario-actions">
+          <a href="#" class="horario-btn">Ver Rutas</a>
+          <a href="#" class="horario-btn editar">Editar</a>
+        </div>
+      </div>
+      <div class="horario-dia">
+        <h3>Miércoles</h3>
+        <p>14:00 - Cálculo</p>
+        <div class="horario-actions">
+          <a href="#" class="horario-btn">Ver Rutas</a>
+          <a href="#" class="horario-btn editar">Editar</a>
+        </div>
+      </div>
+      <div class="horario-dia">
+        <h3>Jueves</h3>
+        <p>-</p>
+        <div class="horario-actions">
+          <a href="#" class="horario-btn">Ver Rutas</a>
+          <a href="#" class="horario-btn editar">Editar</a>
+        </div>
+      </div>
+      <div class="horario-dia">
+        <h3>Viernes</h3>
+        <p>08:00 - IHC</p>
+        <div class="horario-actions">
+          <a href="#" class="horario-btn">Ver Rutas</a>
+          <a href="#" class="horario-btn editar">Editar</a>
+        </div>
+      </div>
+      <div class="horario-dia">
+        <h3>Sábado</h3>
+        <p>-</p>
+        <div class="horario-actions">
+          <a href="#" class="horario-btn">Ver Rutas</a>
+          <a href="#" class="horario-btn editar">Editar</a>
+        </div>
+      </div>
+      <div class="horario-dia">
+        <h3>Domingo</h3>
+        <p>-</p>
+        <div class="horario-actions">
+          <a href="#" class="horario-btn">Ver Rutas</a>
+          <a href="#" class="horario-btn editar">Editar</a>
+        </div>
+      </div>
     </div>
   </div>
-    </section>
+</section>
     <footer id="footer-13" class="section text-center" sitemeta="[object Object]" activepage="Landing">
       <div class="container col-12">
         <nav class="mb50"><a target="_blank" href="" class="nav-link secondary-color"></a></nav>

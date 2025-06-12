@@ -49,18 +49,10 @@
 .custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .secondary-bg { background-color: #2898FB }
 .custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .secondary-color { color: #D7F9FF }
 .custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .svg-fill { fill: #717171 }
-
             </style>
   </head>
 
   <body class="font-friendly">
-    <script>
-    function cambiarContenido(nuevaSrc, textoIzq, textoDer) {
-    document.getElementById('imagen-central').src = nuevaSrc;
-    document.getElementById('texto-izquierda').innerHTML = textoIzq;
-    document.getElementById('texto-derecha').innerHTML = textoDer;
-    }
-    </script>
     <div class="custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9">
       <header class="header">
         <div class="container-lrg">
@@ -69,30 +61,38 @@
           </div>
         </div>
       </header>
-  <section class="planner-section">
-  <div class="planner-container">
-    <h2 class="planner-title">Planificador de transporte público de Lima</h2>
-
-    <div class="planner-buttons">
-      <button onclick="cambiarContenido('assets/images/R2075095.png', 'PARADAS DE BUS<br><br>🚌Ate - Callao<br>🚌Molina - San Miguel<br>🚌Ate - San Miguel', 'DATOS DE CORREDOR<br><br>Corredor Rojo tiene rutas de autobús que operan en todo Lima incluyendo: Ate, San Isidro, Lince, San Borja, Jesus Mari, San Miguel, La Molina.')">Corredor Rojo</button>
-      <button onclick="cambiarContenido('assets/images/R6593302.png', 'PARADAS DE BUS<br><br>🚌Terminal Naranjal<br>🚌Estacion Chimpu<br>🚌Terminal Matellini<br>🚌Plaza de Flores', 'DATOS DE CORREDOR<br><br>Metropolitano tiene rutas de autobús que operan en todo Lima incluyendo: Miraflores, Lince, Independen, San Martin, Carabayllo, Breña, Chorrillos, Lima.')">Metropolitano</button>
-      <button onclick="cambiarContenido('assets/images/R858863.png', 'PARADAS DE BUS<br><br>🚌S.J.L. - Magdalena<br>🚌S.J.L. - San Isidro<br>🚌S.J.L. - Centro de Lima', 'DATOS DE CORREDOR<br><br>Corredor Morado tiene rutas de autobús que operan en todo Lima incluyendo: San Juan D, Jesus Mari, Lima.')">Corredor Morado</button>
-      <button onclick="cambiarContenido('assets/images/R861589.png', 'PARADAS DE BUS<br><br>🚌Rimac - Barranco<br>🚌S.J.L. - Miraflores<br>🚌Rimac - Miraflores<br>🚌Alimentador Abancaes<br>🚌Alimentador Las Lomas', 'DATOS DE CORREDOR<br><br>Corredor Azul tiene rutas de autobús que operan en todo Lima incluyendo: Miraflores, San Juan D, Lima.')">Corredor Azul</button>
-      <button onclick="cambiarContenido('assets/images/R882689.png', 'PARADAS DE BUS<br><br>🚌Tahuantinsuyo<br>🚌Naranjal<br>🚌Trapiche<br>🚌Collique<br>🚌Payet<br>🚌Belaunde<br>🚌Carabayllo<br>🚌Puente Piedra', 'DATOS DE CORREDOR<br><br>Metropolitano - Alimentadores tiene rutas de autobús que operan en todo Lima incluyendo: Puente Pie, Carabayllo, San Martin, Comas, Los Olivos, Villa El S.')">Metropolitano - Alimentadores</button>
-      <button onclick="cambiarContenido('assets/images/R1110949.png', 'PARADAS DE BUS<br><br>🚌S.M.P. - Santiago de Surco', 'DATOS DE CORREDOR<br><br>El autobús ruta comienza en Pacasmayo y termina en Upc Monterrico.')">Grupo Diez S.A.C</button>
-      <button onclick="cambiarContenido('assets/images/R10271.png', 'PARADAS DE BUS<br><br>🚌Callao - La Punta<br>🚌La Q', 'DATOS DE CORREDOR<br><br>La línea más larga de Transportes y Servicios La Esperanza S.A. es la UCL03. El autobús ruta comienza en Zela y termina en Avenida Bertello. ')">Transporte y Servicio La Esperanza S.A.</button>
-      <button onclick="cambiarContenido('assets/images/R858787.png', 'PARADAS DE BUS<br><br>🚌Huaytapampa<br>🚌Loza/Alca<br>🚌Jr Alca<br>🚌Jose Gabriel<br>🚌San Francisco', 'DATOS DE CORREDOR<br><br>La primera parada de la línea CR53 de autobús es Huaytapampa y la última parada es Contisuyo. La línea CR53 (Independencia - San Miguel) está operativa los todos los días.')">Consorcio S4</button>
-      <button onclick="cambiarContenido('assets/images/R858863.png', 'PARADAS DE BUS<br><br>🚌Ate - S.M.P.', 'DATOS DE CORREDOR<br><br>Virgen de la Asunción S.A. tiene rutas de autobús que operan en todo Lima incluyendo: Ate, Santa Anit.')">Virgen de la Asuncion S.A.</button>
+  <section class="alarma-section">
+  <div class="alarma-container">
+    <div class="alarma-header">
+      <span class="alarma-user">🔴 Bienvenido Leonardo</span>
+      <span class="alarma-icon">🔔</span>
     </div>
 
-    <div class="planner-display">
-      <div id="texto-izquierda" class="planner-side"></div>
-      <img id="imagen-central" class="planner-image" src="assets/images/previewMap.png" alt="Imagen central">
-      <div id="texto-derecha" class="planner-side"></div>
+    <div class="alarma-info">
+      <h2>Alarma dentro<br>de 6 horas</h2>
+      <p>lun, 9 de jun, 12:00 p. m.</p>
     </div>
-    <button class="btn-favorito">⭐ Agregar ruta a Favoritos</button>
+
+    <div class="alarma-preferencia">
+      <h3>¿Qué medio de transporte usas?</h3>
+      <div class="alarma-checkboxes">
+        <label><input type="checkbox" checked> Bus Local</label>
+        <label><input type="checkbox" checked> Corredores</label>
+        <label><input type="checkbox" checked> Metropolitano</label>
+      </div>
+    </div>
+
+    <div class="alarma-noticias">
+      <h3>Noticias</h3>
+      <div class="alarma-noticia">
+        <img src="assets/images/news.jpg" alt="Noticia">
+        <p>
+          Durante la Feria del Sol, la carretera principal se congestionó por turistas. Autoridades recomiendan rutas alternas y conducir con precaución para evitar retrasos.
+        </p>
+      </div>
+    </div>
   </div>
-    </section>
+</section>
     <footer id="footer-13" class="section text-center" sitemeta="[object Object]" activepage="Landing">
       <div class="container col-12">
         <nav class="mb50"><a target="_blank" href="" class="nav-link secondary-color"></a></nav>
@@ -102,6 +102,7 @@
           <span class="span secondary-color">©</span> <span class="span secondary-color">RappiRuta S.A.C 2025</span></div>
         </div>
     </footer>
+
   </body>
 
 </html>
