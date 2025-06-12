@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RappiRuta</title>
+    <meta charSet="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="TODO EL TRANSPORTE EN UN SÓLO APP
+">
+    <meta property="og:image" content="">
+    <link rel="shortcut icon" href="assets/images/16cbe630-d358-4e30-a3d4-93d1795c597d.png" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css  ">
+    <link rel="stylesheet" href="css/color.css">
+    <style>
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .accent-bg { background-color: #FAFBFC }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 { background-image: linear-gradient(#3C4D81, #111D45) }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .primary-color { color: #FFFFFF }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .secondary-bg { background-color: #FFFFFF }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .secondary-color { color: #FFFFFF }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .svg-fill { fill: #3C4D81 }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .accent-bg { background-color: #FFFFFF }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 { background-image: linear-gradient(#111D45, #3C4D81) }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .primary-color { color: #FFFFFF }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .secondary-bg { background-color: #FFFFFF }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .secondary-color { color: #FFFFFF }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .svg-fill { fill: #111D45 }
+.custom-color-792d0245-1e66-b152-99b2-8135e8f49ee2 .accent-bg { background-color: #3C4D81 }
+.custom-color-792d0245-1e66-b152-99b2-8135e8f49ee2 { background-color: #FFFFFF }
+.custom-color-792d0245-1e66-b152-99b2-8135e8f49ee2 .primary-color { color: #6E6E6E }
+.custom-color-792d0245-1e66-b152-99b2-8135e8f49ee2 .secondary-bg { background-color: #2898FB }
+.custom-color-792d0245-1e66-b152-99b2-8135e8f49ee2 .secondary-color { color: #000000 }
+.custom-color-792d0245-1e66-b152-99b2-8135e8f49ee2 .svg-fill { fill: #FFFFFF }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .accent-bg { background-color: #FAFBFC }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 { background-image: linear-gradient(#3C4D81, #111D45) }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .primary-color { color: #FFFFFF }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .secondary-bg { background-color: #FFFFFF }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .secondary-color { color: #FFFFFF }
+.custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9 .svg-fill { fill: #3C4D81 }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .accent-bg { background-color: #FFFFFF }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 { background-image: linear-gradient(#111D45, #3C4D81) }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .primary-color { color: #FFFFFF }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .secondary-bg { background-color: #FFFFFF }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .secondary-color { color: #FFFFFF }
+.custom-color-8e3386f8-0d00-7d73-a81a-8257c9b6e381 .svg-fill { fill: #111D45 }
+.custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .accent-bg { background-color: #999999 }
+.custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d { background-image: linear-gradient(#3C4D81, #111D45) }
+.custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .primary-color { color: #FFFFFF }
+.custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .secondary-bg { background-color: #2898FB }
+.custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .secondary-color { color: #D7F9FF }
+.custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .svg-fill { fill: #717171 }
+            </style>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    section.registro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #2e3b69;
+    }
+
+    .registro-container {
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      color: white;
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    .registro-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .registro-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00b386;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 2px 2px 2px black;
+      cursor: pointer;
+    }
+
+    .registro-container button:hover {
+      background-color: #009e75;
+    }
+
+    .login-link {
+      margin-top: 15px;
+      color: #00b386;
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+    }
+  </style>
+  </head>
+
+  <body class="font-friendly">
+    <div class="custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9">
+      <header class="header">
+        <div class="container-lrg">
+          <div class="flex"><a class="logo logo__white"><img src="assets/images/gridlogo.png" alt="RappiRutaLogo"></a> <a href="#main-menu" id="menu" class="menu-toggle"><b class="nav-link mr0 secondary-color">☰</b></a>
+            <nav id="main-menu" role="navigation" class="main-menu"><a href="#" id="main-menu-close" class="menu-close"><span class="bold">✕</span></a> <a href="index.html" class="nav-link secondary-color">Inicio</a> <a href="rutas.html" class="nav-link secondary-color">Rutas</a> <a href="herramientas.html" class="nav-link secondary-color">Herramientas</a><a href="login.html" class="nav-link login-btn">Iniciar sesión</a><a href="register.html" class="nav-link secondary-color register-btn">Registrarse</a></nav>
+          </div>
+        </div>
+      </header>
+      <section class="registro">
+  <div class="registro-container">
+    <h2>Registrarse</h2>
+    <input type="text" placeholder="Nombre completo">
+    <input type="email" placeholder="Correo electrónico">
+    <input type="text" placeholder="Nombre de usuario">
+    <input type="password" placeholder="Contraseña">
+    <button>Crear cuenta</button>
+    <a href="#" class="login-link">¿Ya tienes cuenta? Inicia Sesión</a>
+  </div>
+    </section>
+    <footer id="footer-13" class="section text-center" sitemeta="[object Object]" activepage="Landing">
+      <div class="container col-12">
+        <nav class="mb50"><a target="_blank" href="" class="nav-link secondary-color"></a></nav>
+        <div class="mt50">
+          <a target="_blank"><span class="span secondary-color">Política de privacidad</span></a>
+          <br>
+          <span class="span secondary-color">©</span> <span class="span secondary-color">RappiRuta S.A.C 2025</span></div>
+        </div>
+    </footer>
+
+  </body>
+
+</html>
