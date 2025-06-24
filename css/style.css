@@ -192,7 +192,38 @@
   font-size: 14px;
   text-align: left;
 }
+#ajustes-section {
+  background-color: #0a1c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.ajustes-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.boton-ajuste {
+  background-color: #1e3a8a;
+  color: white;
+  width: 300px; 
+  height: 80px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-ajuste:hover {
+  background-color: #2b55d4;
+}
 @media screen and (max-width: 960px) {
   .planner-display {
     grid-template-columns: 1fr;
@@ -316,21 +347,11 @@
   margin: 0 20px;
 }
 .logo img {
-  max-height: 100px;
+  max-height: 140px;
   width: auto;     
   height: auto;
   display: block;
-  margin: 0 auto;
 }
-#ajustes-section {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f5fc;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
 
 #ajustes-section .header-ajustes {
       background-color: #0a1c34;
@@ -402,26 +423,6 @@
       padding: 24px 16px;
       box-sizing: border-box;
     }
-
-#ajustes-section .boton-ajuste {
-      background-color: #f9fbfe;
-      color: #627b9a;
-      padding: 14px;
-      margin: 12px 0;
-      border: none;
-      border-radius: 16px;
-      width: 100%;
-      font-size: 16px;
-      font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      transition: background-color 0.3s ease;
-    }
-
-#ajustes-section .boton-ajuste:hover {
-      background-color: #dce7f6;
-      cursor: pointer;
-    }
-
 @media (max-width: 500px) {
       #ajustes-section .ajustes-contenedor {
         padding: 20px 10px;
@@ -905,7 +906,7 @@ img {
     gap: 1rem;
   }
   .logo {
-    margin: 0 auto;
+    margin-left: 80px;
   }
 	.container-lrg.flex,
 	.container.flex,
