@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Registro | RappiRuta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- favicon + estilos principales -->
+  <link rel="shortcut icon" href="assets/images/16cbe630-d358-4e30-a3d4-93d1795c597d.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="rr-gradient">
+
+
+  <header class="header">
+    <div class="container-lrg">
+      <a href="index.html" class="logo">
+        <img src="assets/images/gridlogo.png" alt="RappiRuta">
+      </a>
+
+      <nav class="main-menu">
+        <a href="index.html"        class="nav-link">Inicio</a>
+        <a href="rutas.html"        class="nav-link">Rutas</a>
+        <a href="herramientas.html" class="nav-link">Herramientas</a>
+        <a href="login.html"        class="nav-link login-btn">Iniciar sesión</a>
+        <a href="register.html"     class="nav-link register-btn">Registrarse</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="register-wrapper">
+    <form id="registerForm" class="register-card" autocomplete="off">
+      <h1>Crear cuenta</h1>
+
+      <input id="email"   type="email"    placeholder="Correo electrónico"          required>
+      <input id="pass"    type="password" placeholder="Contraseña (mín. 6 caract.)" minlength="6" required>
+      <input id="confirm" type="password" placeholder="Confirmar contraseña"        minlength="6" required>
+
+      <button type="submit">Registrarme y continuar</button>
+      <p id="msg" class="msg"></p>
+    </form>
+  </main>
+
+ 
+  <script>
+    const form    = document.getElementById('registerForm'),
+          pass    = document.getElementById('pass'),
+          confirm = document.getElementById('confirm'),
+          msg     = document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      msg.textContent =
+        pass.value === confirm.value
+          ? '✅ Registro DEMO exitoso'
+          : '⚠️ Las contraseñas no coinciden';
+    });
+  </script>
+</body>
+</html>
