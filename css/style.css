@@ -66,7 +66,7 @@
 
 .horario-form button {
   padding: 10px 20px;
-  background-color: #00b386;
+  background-color: #e63946;
   color: white;
   border: none;
   border-radius: 6px;
@@ -355,6 +355,7 @@
   border-radius: 10px;
   padding: 12px;
   gap: 12px;
+  margin-bottom: 15px;
 }
 .alarma-noticia img {
   width: 120px;
@@ -366,7 +367,23 @@
   font-size: 14px;
   line-height: 1.5;
 }
+.alarma-ruta {
+  background: #1c2a5e;
+  border-radius: 10px;
+  padding: 16px;
+  color: white;
+  margin: 20px 0;
+}
 
+.ruta-contenido h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.ruta-contenido p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
 .nav-link {
   font-size: 22px;
   line-height: 44px;
@@ -394,22 +411,29 @@
     }
 .section-detalle {
   padding: 40px 20px;
-  background-color: #f5f7fa;
-  border-top: 2px solid #ccc;
+  background-color: #0f1b3f;
 }
 
 .container-detalle {
   max-width: 800px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #1c2a5e;
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
-
+.detalle-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+  text-align: center;
+}
 .detalle-box p {
   font-size: 16px;
-  color: #333;
+  color: #f8ebeb;
   margin: 10px 0;
   line-height: 1.6;
 }
