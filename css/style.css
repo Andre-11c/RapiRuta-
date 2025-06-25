@@ -63,6 +63,40 @@
   width: 180px;
   font-size: 15px;
 }
+.modal-edicion {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1f2a4c;
+  padding: 32px;
+  border-radius: 16px;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  max-width: 95%;
+  width: 660px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.oculto {
+  display: none;
+}
+
+.btn-eliminar {
+  background-color: #cc0000;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background-color: #ff4444;
+}
 
 .horario-form button {
   padding: 10px 20px;
@@ -292,14 +326,22 @@
 }
 
 .horario-btn.editar {
+  all: unset;
   background-color: #ffaa00;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s;
 }
 
 .horario-btn.editar:hover {
   background-color: #e69c00;
 }
 .alarma-container {
-  background-color: #0f1b3f;
+  background-color: #1c2a5e;
   color: white;
   font-family: 'Montserrat', sans-serif;
   max-width: 800px;
@@ -351,7 +393,7 @@
 }
 .alarma-noticia {
   display: flex;
-  background: #1c2a5e;
+  background: #2d3d7a;
   border-radius: 10px;
   padding: 12px;
   gap: 12px;
@@ -368,7 +410,7 @@
   line-height: 1.5;
 }
 .alarma-ruta {
-  background: #1c2a5e;
+  background: #2d3d7a;
   border-radius: 10px;
   padding: 16px;
   color: white;

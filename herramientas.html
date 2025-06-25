@@ -54,10 +54,33 @@
 
   <body class="font-friendly">
     <script>
-    function cambiarImagen(nuevaSrc) {
-      document.getElementById('imagen-central').src = nuevaSrc;
+  function abrirFormulario(nombre, hora, dia) {
+    document.getElementById('nombre-horario').value = nombre;
+    document.getElementById('hora-horario').value = hora;
+    document.getElementById('dia-horario').value = dia;
+
+    document.getElementById('formulario-edicion').classList.remove('oculto');
+  }
+
+  function cerrarFormulario() {
+    document.getElementById('formulario-edicion').classList.add('oculto');
+  }
+
+  function guardarCambios(event) {
+    event.preventDefault();
+    const nombre = document.getElementById('nombre-horario').value;
+    const hora = document.getElementById('hora-horario').value;
+    const dia = document.getElementById('dia-horario').value;
+    cerrarFormulario();
+  }
+
+  function eliminarHorario() {
+    if (confirm('¿Seguro que deseas eliminar este horario?')) {
+      alert('Horario eliminado');
+      cerrarFormulario();
     }
-    </script>
+  }
+</script>
     <div class="custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9">
       <header class="header">
         <div class="container-lrg">
@@ -99,66 +122,102 @@
 
     <h2 class="horario-heading">Horario Semanal</h2>
     <div class="horario-grid">
+
       <div class="horario-dia">
         <h3>Lunes</h3>
-        <p>08:00 - IHC</p>
-        <p>10:00 - Taller</p>
-        <div class="horario-actions">
-          <a href="#" class="horario-btn">Ver Rutas</a>
-          <a href="#" class="horario-btn editar">Editar</a>
+
+        <div class="horario-item">
+          <p>08:00 - IHC</p>
+          <div class="horario-actions">
+            <a href="#" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('IHC', '08:00', 'Lunes')">Editar</button>
+          </div>
+        </div>
+
+        <div class="horario-item">
+          <p>10:00 - Taller</p>
+          <div class="horario-actions">
+            <a href="#" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Taller', '10:00', 'Lunes')">Editar</button>
+          </div>
         </div>
       </div>
+
       <div class="horario-dia">
         <h3>Martes</h3>
-        <p>09:00 - Física I</p>
-        <div class="horario-actions">
-          <a href="#" class="horario-btn">Ver Rutas</a>
-          <a href="#" class="horario-btn editar">Editar</a>
+        <div class="horario-item">
+          <p>09:00 - Física I</p>
+          <div class="horario-actions">
+            <a href="#" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Física I', '09:00', 'Martes')">Editar</button>
+          </div>
         </div>
       </div>
+
       <div class="horario-dia">
         <h3>Miércoles</h3>
-        <p>14:00 - Cálculo</p>
-        <div class="horario-actions">
-          <a href="#" class="horario-btn">Ver Rutas</a>
-          <a href="#" class="horario-btn editar">Editar</a>
+        <div class="horario-item">
+          <p>14:00 - Cálculo</p>
+          <div class="horario-actions">
+            <a href="#" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Cálculo', '14:00', 'Miércoles')">Editar</button>
+          </div>
         </div>
       </div>
+
       <div class="horario-dia">
         <h3>Jueves</h3>
-        <p>-</p>
-        <div class="horario-actions">
-          <a href="#" class="horario-btn">Ver Rutas</a>
-          <a href="#" class="horario-btn editar">Editar</a>
+        <div class="horario-item">
+          <p>-</p>
         </div>
       </div>
+
       <div class="horario-dia">
         <h3>Viernes</h3>
-        <p>08:00 - IHC</p>
-        <div class="horario-actions">
-          <a href="#" class="horario-btn">Ver Rutas</a>
-          <a href="#" class="horario-btn editar">Editar</a>
+        <div class="horario-item">
+          <p>08:00 - IHC</p>
+          <div class="horario-actions">
+            <a href="#" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('IHC', '08:00', 'Viernes')">Editar</button>
+          </div>
         </div>
       </div>
+
       <div class="horario-dia">
         <h3>Sábado</h3>
-        <p>-</p>
-        <div class="horario-actions">
-          <a href="#" class="horario-btn">Ver Rutas</a>
-          <a href="#" class="horario-btn editar">Editar</a>
+        <div class="horario-item">
+          <p>-</p>
         </div>
       </div>
+
       <div class="horario-dia">
         <h3>Domingo</h3>
-        <p>-</p>
-        <div class="horario-actions">
-          <a href="#" class="horario-btn">Ver Rutas</a>
-          <a href="#" class="horario-btn editar">Editar</a>
+        <div class="horario-item">
+          <p>-</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+<div id="formulario-edicion" class="modal-edicion oculto">
+  <form class="horario-form" onsubmit="guardarCambios(event)">
+    <input type="text" id="nombre-horario" placeholder="Nombre del horario" required>
+    <input type="time" id="hora-horario" required>
+    <select id="dia-horario" required>
+      <option value="" disabled selected>Día</option>
+      <option>Lunes</option>
+      <option>Martes</option>
+      <option>Miércoles</option>
+      <option>Jueves</option>
+      <option>Viernes</option>
+      <option>Sábado</option>
+      <option>Domingo</option>
+    </select>
+    <button type="submit">Guardar</button>
+    <button type="button" onclick="eliminarHorario()" class="btn-eliminar">🗑 Eliminar</button>
+    <button type="button" onclick="cerrarFormulario()">Cancelar</button>
+  </form>
+</div>
     <footer id="footer-13" class="section text-center" sitemeta="[object Object]" activepage="Landing">
       <div class="container col-12">
         <nav class="mb50"><a target="_blank" href="" class="nav-link secondary-color"></a></nav>
