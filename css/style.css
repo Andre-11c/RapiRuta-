@@ -10,13 +10,13 @@
 	text-rendering: optimizeLegibility;
 }
 .header {
-	padding-top: 40px;
+	padding-top: 20px;
 }
 .logo {
   font-size: calc(120% + 1vw);
   line-height: 200px;
   font-weight: bold;
-  float: left;
+  float: center;
 }
 .alarma-section {
   background-color: #0a1c34;
@@ -308,15 +308,15 @@
 }
 
 .nav-link {
-  font-size: 19px;
+  font-size: 22px;
   line-height: 44px;
   text-decoration: none;
   color: inherit;
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 .logo img {
-  max-height: 60px;
+  max-height: 100px;
   width: auto;     
   height: auto;
   display: block;
@@ -486,7 +486,64 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+.profile-button {
+  background: linear-gradient(135deg, #65c04f, #4bb045); /* degradado similar */
+  color: #ffffff; /* texto blanco */
+  border: none;
+  border-radius: 12px; /* bordes redondeados */
+  padding: 12px 24px; /* espacio interno */
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* sombra sutil */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.opinion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
 
+.opinion-input {
+  width: 90%;
+  max-width: 500px;
+  min-height: 120px;
+  padding: 16px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  resize: vertical;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.opinion-input:focus {
+  border-color: #e91e63;
+}
+
+.opinion-submit {
+  background: linear-gradient(to right, #e53935, #e91e63, #ba68c8);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.profile-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.profile-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 .botones button {
   margin-left: 20px;
   margin-bottom: 10px;
@@ -1051,7 +1108,7 @@ img {
   background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB3aWR0aD0iMTI0IiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEyNCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExMC43ODQuOThIMTIuNzQ1QzYuMDA1Ljk4LjU1MSA2LjQ5NS41NTEgMTMuMjM1bC0uMDYgNzMuNTNjMCA2Ljc0IDUuNTE0IDEyLjI1NSAxMi4yNTQgMTIuMjU1aDk4LjA0YzYuNzQgMCAxMi4yNTQtNS41MTUgMTIuMjU0LTEyLjI1NXYtNzMuNTNjMC02Ljc0LTUuNTE0LTEyLjI1NS0xMi4yNTUtMTIuMjU1em0wIDI0LjUxbC00OS4wMiAzMC42MzdMMTIuNzQ2IDI1LjQ5VjEzLjIzNWw0OS4wMiAzMC42MzggNDkuMDItMzAuNjM4VjI1LjQ5eiIvPjwvc3ZnPg==);
 }.press-logo {
   max-width: 100%;
-  max-height: 60px;
+  max-height: 100px;
   display: block;
   margin: auto;
 }.icon {
@@ -1106,7 +1163,7 @@ img {
 
 @media (min-width: 820px) {
   .header .nav-link:last-of-type {
-    margin-right: 0;
+    margin-right: 40;
   }
   .menu-toggle {
     line-height: 44px;
