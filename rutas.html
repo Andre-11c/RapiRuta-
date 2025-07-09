@@ -54,65 +54,23 @@
   </head>
 
   <body class="font-friendly">
-  <script>
-  function cambiarContenido(nuevaSrc, textoRutas, textoDer) {
-    document.getElementById('imagen-central').src = nuevaSrc;
-
-    const contenedorIzquierda = document.getElementById('texto-izquierda');
-    contenedorIzquierda.innerHTML = '';
-
-    const lineas = textoRutas.split('<br>').filter(linea => linea.trim() !== '');
-
-    if (lineas.length > 0) {
-      const titulo = document.createElement('h3');
-      titulo.textContent = lineas[0].replace(/🚌/g, '').trim();
-      titulo.className = 'titulo-paradas';
-      contenedorIzquierda.appendChild(titulo);
-    }
-
-    for (let i = 1; i < lineas.length; i++) {
-      const parada = lineas[i].trim();
-      if (!parada) continue;
-
-      const divRuta = document.createElement('div');
-      divRuta.className = 'ruta-item';
-
-      const nombreParada = document.createElement('div');
-      nombreParada.className = 'nombre-parada';
-      nombreParada.textContent = parada;
-
-      const botonesContainer = document.createElement('div');
-      botonesContainer.className = 'botones-parada';
-
-      const btnFav = document.createElement('button');
-      btnFav.className = 'btn-ruta';
-      btnFav.textContent = '⭐ Favorito';
-
-      const btnDet = document.createElement('button');
-      btnDet.className = 'btn-ruta';
-      btnDet.textContent = 'ℹ️ Detalles';
-      btnDet.onclick = function () {
-        window.location.href = 'detalles.html';
-      };
-
-      botonesContainer.appendChild(btnFav);
-      botonesContainer.appendChild(btnDet);
-
-      divRuta.appendChild(nombreParada);
-      divRuta.appendChild(botonesContainer);
-
-      contenedorIzquierda.appendChild(divRuta);
-    }
-
-    document.getElementById('texto-derecha').innerHTML = textoDer;
-  }
-  </script>
+  <script src="assets/jscript.js"></script>
     <div class="custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9">
       <header class="header">
         <div class="container-lrg">
           <div class="flex"><a class="logo logo__white"><img src="assets/images/gridlogo.png" alt="RappiRutaLogo"></a> <a href="#main-menu" id="menu" class="menu-toggle"><b class="nav-link mr0 secondary-color">☰</b></a>
             <nav id="main-menu" role="navigation" class="main-menu"><a href="#" id="main-menu-close" class="menu-close"><span class="bold">✕</span></a> <a href="inicio.html" class="nav-link secondary-color">Inicio</a> <a href="rutas.html" class="nav-link secondary-color">Rutas</a> <a href="herramientas.html" class="nav-link secondary-color">Horarios</a><a href="ajustes.html" class="nav-link secondary-color">Configuracion</a>
-            <a href="ajustes.html" class="nav-link secondary-color profile-button"><svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"> <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v1.2h19.2v-1.2c0-3.2-6.4-4.8-9.6-4.8z"/></svg> Leonardo H.</a></nav>
+            <div class="user-menu-btn" style="display:inline-block;position:relative;">
+              <button id="profile-btn" class="nav-link secondary-color profile-button user-menu-btn" type="button">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v1.2h19.2v-1.2c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                <span>Leonardo H.</span>
+              </button>
+              <div id="user-menu-dropdown" class="user-menu-dropdown secondary-bg">
+                <a href="#" class="user-menu-item secondary-color">Editar perfil</a>
+                <a href="#" class="user-menu-item secondary-color">Cerrar sesión</a>
+              </div>
+            </div>
+          </nav>
           </div>
         </div>
       </header>
@@ -134,7 +92,7 @@
 
     <div class="planner-display">
       <div id="texto-izquierda" class="planner-side"></div>
-      <img id="imagen-central" class="planner-image" src="assets/images/previewMap.png" alt="Imagen central">
+      <img id="imagen-central" class="planner-image" src="assets/images/R2075095.png" alt="Imagen central">
       <div id="texto-derecha" class="planner-side"></div>
     </div>
   </div>
