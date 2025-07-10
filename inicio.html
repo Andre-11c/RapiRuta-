@@ -64,12 +64,11 @@
                 <span>Leonardo H.</span>
               </button>
               <div id="user-menu-dropdown" class="user-menu-dropdown secondary-bg">
-                <a href="#" class="user-menu-item secondary-color">Editar perfil</a>
-                <a href="#" class="user-menu-item secondary-color">Cerrar sesión</a>
+                <a href="editar_perfil.html" class="user-menu-item secondary-color">Editar perfil</a>
+                <a href="login.html" class="user-menu-item secondary-color">Cerrar sesión</a>
               </div>
             </div>
           </nav>
-  <script src="assets/jscript.js"></script>
           </div>
         </div>
       </header>
@@ -79,45 +78,73 @@
       <span class="alarma-user">🔴 Bienvenido Leonardo</span>
       <span class="alarma-icon">🔔</span>
     </div>
-
     <div class="alarma-info">
       <h2>Alarma dentro<br>de 6 horas</h2>
       <p>lun, 9 de jun, 12:00 p. m.</p>
     </div>
     <div class="alarma-ruta">
-  <div class="ruta-contenido">
-    <h3>🚌 Ruta Sugerida</h3>
-    <p><strong>Corredor Rojo:</strong> Ate → San Miguel</p>
-    <p><strong>Estado del tráfico:</strong> Ligeramente congestionado</p>
-    <p><strong>Salida recomendada:</strong> 11:10 a.m.</p>
-  </div>
-  </div>
+      <div class="ruta-contenido">
+        <h3 class="ruta-titulo" style="color:#fff; font-size:1.18em; margin-bottom:10px;">🚌 Ruta Sugerida</h3>
+        <p class="ruta-detalle" style="font-size:1em;"> <strong>Corredor Rojo:</strong> Ate → San Miguel</p>
+        <p class="ruta-detalle" style="font-size:1em;"> <strong>Estado del tráfico:</strong> Ligeramente congestionado</p>
+        <p class="ruta-detalle" style="font-size:1em;"> <strong>Salida recomendada:</strong> 11:10 a.m.</p>
+        <a href="rutas.html" class="ver-ruta-btn" style="display:block;margin:18px auto 0 auto;padding:10px 36px;border-radius:18px;border:none;background:#2898FB;color:#fff;font-weight:600;font-size:1.08em;box-shadow:0 2px 8px rgba(40,152,251,0.10);cursor:pointer;transition:background 0.2s;text-align:center;text-decoration:none;max-width:200px;">Ver Ruta</a>
+      </div>
+    </div>
     <div class="alarma-noticias">
-      <h3>Noticias</h3>
-      <div class="alarma-noticia">
+      <h3 class="noticias-titulo" style="color:#fff; font-size:1.25em;">Noticias</h3>
+      <div class="alarma-noticia noticia-item">
         <img src="assets/images/news.jpg" alt="Noticia">
-        <p>
+        <p class="noticia-texto">
           Durante la Feria del Sol, la carretera principal se congestionó por turistas. Autoridades recomiendan rutas alternas y conducir con precaución para evitar retrasos.
         </p>
       </div>
-      <div class="alarma-noticia">
+      <div class="alarma-noticia noticia-item">
         <img src="assets/images/new3.jpg" alt="Noticia">
-        <p>
+        <p class="noticia-texto">
           Por trabajos de mantenimiento, la Av. Central presenta cierres parciales desde las 9:00 a.m. hasta las 5:00 p.m. Se sugiere tomar vías alternas para evitar congestión.
         </p>
       </div>
-      <div class="alarma-noticia">
+      <div class="alarma-noticia noticia-item">
         <img src="assets/images/new4.jpg" alt="Noticia">
-        <p>
+        <p class="noticia-texto">
           Un accidente múltiple en la vía rápida Norte genera demoras de más de 30 minutos. Se recomienda a los conductores planificar rutas alternativas.
         </p>
       </div>
-      <div class="alarma-noticia">
+      <div class="alarma-noticia noticia-item">
         <img src="assets/images/new2.jpg" alt="Noticia">
-        <p>
+        <p class="noticia-texto">
           El aumento de turistas en el distrito costero ha generado atascos en la carretera Panamericana Sur. La Policía de Tránsito refuerza el control en la zona.
         </p>
       </div>
+      <div id="noticias-extra" style="display:none;">
+        <div class="alarma-noticia noticia-item">
+          <img src="assets/images/screenBus.png" alt="Noticia">
+          <p class="noticia-texto">
+            Nuevo servicio de buses eléctricos inicia operaciones en la ciudad, ofreciendo rutas ecológicas y mayor comodidad para los usuarios.
+          </p>
+        </div>
+        <div class="alarma-noticia noticia-item">
+          <img src="assets/images/screenAlarm.png" alt="Noticia">
+          <p class="noticia-texto">
+            Se implementan alarmas inteligentes en paraderos principales para mejorar la seguridad de los pasajeros durante la noche.
+          </p>
+        </div>
+        <div class="alarma-noticia noticia-item">
+          <img src="assets/images/screenRu.png" alt="Noticia">
+          <p class="noticia-texto">
+            El corredor azul amplía su recorrido hasta el distrito de Miraflores, facilitando el acceso a zonas turísticas y comerciales.
+          </p>
+        </div>
+        <div class="alarma-noticia noticia-item">
+          <img src="assets/images/screenTrack.png" alt="Noticia">
+          <p class="noticia-texto">
+            Nueva función de rastreo en tiempo real permite a los usuarios conocer la ubicación exacta de su bus desde la app.
+          </p>
+        </div>
+      </div>
+      <button id="ver-mas-noticias" class="ver-mas-btn" style="display:block;margin:18px auto 0 auto;padding:8px 28px;border-radius:18px;border:none;background:#3C4D81;color:#fff;font-weight:600;font-size:1.08em;box-shadow:0 2px 8px rgba(60,77,129,0.10);cursor:pointer;transition:background 0.2s;">Ver más</button>
+      <!-- Botón Ver Ruta eliminado según solicitud -->
     </div>
   </div>
 </section>
@@ -130,7 +157,6 @@
           <span class="span secondary-color">©</span> <span class="span secondary-color">RappiRuta S.A.C 2025</span></div>
         </div>
     </footer>
-
+    <script src="assets/jscript.js"></script>
   </body>
-
 </html>

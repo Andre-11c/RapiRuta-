@@ -53,7 +53,6 @@
   </head>
 
   <body class="font-friendly">
-    <script src="assets/jscript.js"></script>
     <div class="custom-color-5fabc95b-357f-3cef-ab4d-a0273ca3e2e9">
       <header class="header">
         <div class="container-lrg">
@@ -65,8 +64,8 @@
                 <span>Leonardo H.</span>
               </button>
               <div id="user-menu-dropdown" class="user-menu-dropdown secondary-bg">
-                <a href="#" class="user-menu-item secondary-color">Editar perfil</a>
-                <a href="#" class="user-menu-item secondary-color">Cerrar sesión</a>
+                <a href="editar_perfil.html" class="user-menu-item secondary-color">Editar perfil</a>
+                <a href="login.html" class="user-menu-item secondary-color">Cerrar sesión</a>
               </div>
             </div>
           </nav>
@@ -112,7 +111,7 @@
         <div class="horario-item">
           <p>08:00 - IHC</p>
           <div class="horario-actions">
-            <a href="#" class="horario-btn">Ver Ruta</a>
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
             <button class="horario-btn editar" onclick="abrirFormulario('IHC', '08:00', 'Lunes')">Editar</button>
           </div>
         </div>
@@ -120,7 +119,7 @@
         <div class="horario-item">
           <p>10:00 - Taller</p>
           <div class="horario-actions">
-            <a href="#" class="horario-btn">Ver Ruta</a>
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
             <button class="horario-btn editar" onclick="abrirFormulario('Taller', '10:00', 'Lunes')">Editar</button>
           </div>
         </div>
@@ -131,8 +130,15 @@
         <div class="horario-item">
           <p>09:00 - Física I</p>
           <div class="horario-actions">
-            <a href="#" class="horario-btn">Ver Ruta</a>
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
             <button class="horario-btn editar" onclick="abrirFormulario('Física I', '09:00', 'Martes')">Editar</button>
+          </div>
+        </div>
+        <div class="horario-item">
+          <p>11:00 - Álgebra</p>
+          <div class="horario-actions">
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Álgebra', '11:00', 'Martes')">Editar</button>
           </div>
         </div>
       </div>
@@ -142,8 +148,15 @@
         <div class="horario-item">
           <p>14:00 - Cálculo</p>
           <div class="horario-actions">
-            <a href="#" class="horario-btn">Ver Ruta</a>
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
             <button class="horario-btn editar" onclick="abrirFormulario('Cálculo', '14:00', 'Miércoles')">Editar</button>
+          </div>
+        </div>
+        <div class="horario-item">
+          <p>16:00 - Programación</p>
+          <div class="horario-actions">
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Programación', '16:00', 'Miércoles')">Editar</button>
           </div>
         </div>
       </div>
@@ -151,7 +164,18 @@
       <div class="horario-dia">
         <h3>Jueves</h3>
         <div class="horario-item">
-          <p>-</p>
+          <p>08:30 - Estadística</p>
+          <div class="horario-actions">
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Estadística', '08:30', 'Jueves')">Editar</button>
+          </div>
+        </div>
+        <div class="horario-item">
+          <p>12:00 - Historia</p>
+          <div class="horario-actions">
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Historia', '12:00', 'Jueves')">Editar</button>
+          </div>
         </div>
       </div>
 
@@ -160,24 +184,42 @@
         <div class="horario-item">
           <p>08:00 - IHC</p>
           <div class="horario-actions">
-            <a href="#" class="horario-btn">Ver Ruta</a>
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
             <button class="horario-btn editar" onclick="abrirFormulario('IHC', '08:00', 'Viernes')">Editar</button>
+          </div>
+        </div>
+        <div class="horario-item">
+          <p>13:00 - Inglés</p>
+          <div class="horario-actions">
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Inglés', '13:00', 'Viernes')">Editar</button>
           </div>
         </div>
       </div>
 
+
       <div class="horario-dia">
         <h3>Sábado</h3>
         <div class="horario-item">
-          <p>-</p>
+          <p>10:30 - Laboratorio</p>
+          <div class="horario-actions">
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Laboratorio', '10:30', 'Sábado')">Editar</button>
+          </div>
+        </div>
+        <div class="horario-item">
+          <p>15:00 - Tutoría</p>
+          <div class="horario-actions">
+            <a href="rutas.html" class="horario-btn">Ver Ruta</a>
+            <button class="horario-btn editar" onclick="abrirFormulario('Tutoría', '15:00', 'Sábado')">Editar</button>
+          </div>
         </div>
       </div>
 
+
       <div class="horario-dia">
         <h3>Domingo</h3>
-        <div class="horario-item">
-          <p>-</p>
-        </div>
+        <!-- Sin horarios inicialmente -->
       </div>
     </div>
   </div>
@@ -210,8 +252,6 @@
           <span class="span secondary-color">©</span> <span class="span secondary-color">RappiRuta S.A.C 2025</span></div>
         </div>
     </footer>
-
-
+    <script src="assets/jscript.js"></script>
   </body>
-
 </html>
