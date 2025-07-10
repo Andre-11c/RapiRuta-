@@ -49,6 +49,7 @@
 .custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .secondary-bg { background-color: #2898FB }
 .custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .secondary-color { color: #D7F9FF }
 .custom-color-d78461b1-24d7-4adf-91b4-f7891360b07d .svg-fill { fill: #717171 }
+
             </style>
   </head>
 
@@ -72,36 +73,90 @@
           </div>
         </div>
       </header>
-  <section id="ruta-detalle" class="section-detalle">
-  <div class="container-detalle">
-    <h2 class="heading primary-color">Detalles de la Ruta</h2>
-
-    <div class="detalle-box">
-      <p><strong>Ruta:</strong> Corredor Rojo - Ate hasta San Miguel</p>
-      <p><strong>Paradas:</strong> Universidad - Javier Prado - Arequipa - Brasil - La Marina</p>
-      <p><strong>Frecuencia:</strong> Cada 10 minutos</p>
-      <p><strong>Horario:</strong> 5:00 AM – 11:00 PM</p>
-      <p><strong>Tarifa:</strong> S/ 2.50</p>
-      <p><strong>Tiempo estimado:</strong> 1 hora y 15 minutos</p>
+  <section id="ajustes-section">
+    <style>
+      .perfil-container {
+        background: #3C4D81;
+        color: #fff;
+        max-width: 400px;
+        margin: 48px auto 0 auto;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(60,77,129,0.13);
+        padding: 36px 32px 28px 32px;
+        text-align: center;
+      }
+      .perfil-container h2 {
+        color: #fff;
+        margin-bottom: 18px;
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+      .perfil-form label {
+        display: block;
+        margin: 18px 0 6px 0;
+        font-weight: 600;
+        color: #fff;
+        text-align: left;
+      }
+      .perfil-form input {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        margin-bottom: 8px;
+        font-size: 1em;
+        color: #444;
+        background: #fff;
+      }
+      .perfil-form input::placeholder {
+        color: #b0b0b0;
+        opacity: 1;
+      }
+      .perfil-form button {
+        display: block;
+        width: 100%;
+        margin: 22px auto 0 auto;
+        padding: 10px 0;
+        border-radius: 16px;
+        border: none;
+        background: #2898FB;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.08em;
+        box-shadow: 0 2px 8px rgba(40,152,251,0.10);
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .perfil-form button:hover {
+        background: #3C4D81;
+      }
+      .volver-link {
+        display: block;
+        margin: 24px auto 0 auto;
+        color: #fff;
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 1em;
+        transition: color 0.2s;
+      }
+      .volver-link:hover {
+        color: #2898FB;
+      }
+    </style>
+    <div class="perfil-container">
+      <h2>Editar Perfil</h2>
+      <form class="perfil-form">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" value="Leonardo H." required>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" value="leonardo@email.com" required>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required>
+        <button type="submit">Guardar Cambios</button>
+      </form>
+      <!-- Volver al inicio eliminado -->
     </div>
-
-    <div class="reseña-box">
-      <h3 class="heading secondary-color">Reseña de Usuarios</h3>
-      <div class="estrellas">
-        <span class="estrella">★</span>
-        <span class="estrella">★</span>
-        <span class="estrella">★</span>
-        <span class="estrella">★</span>
-        <span class="estrella">☆</span>
-      </div>
-      <p class="primary-color">4.0 de 5 basado en 120 opiniones</p>
-    </div>
-  </div>
-  <div class="detalle-botones">
-  <button class="btn-ruta" id="btn-favorito-detalles" onclick="mostrarNotificacion('Ruta agregada a Favoritos')">⭐ Favorito</button>
-  <a href="rutas.html" class="btn-ruta">🔙 Regresar</a>
-</div>
-</section>
+  </section>
     <footer id="footer-13" class="section text-center" sitemeta="[object Object]" activepage="Landing">
       <div class="container col-12">
         <nav class="mb50"><a target="_blank" href="" class="nav-link secondary-color"></a></nav>
