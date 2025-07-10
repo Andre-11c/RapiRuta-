@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
   var filtroRuta = document.getElementById('filtro-ruta');
   if (filtroRuta) {
@@ -210,6 +209,118 @@ window.onload = function () {
   }
 };
 
+
+// Datos de rutas
+const rutas = [
+  {
+    nombre: "Corredor Rojo",
+    imagen: "assets/images/R2075095.png",
+    paradas: "PARADAS DE BUS<br><br>🚌Ate - Callao<br>🚌Molina - San Miguel<br>🚌Ate - San Miguel",
+    datos: "DATOS DE CORREDOR<br><br>Corredor Rojo tiene rutas de autobús que operan en todo Lima incluyendo: Ate, San Isidro, Lince, San Borja, Jesus Maria, San Miguel, La Molina."
+  },
+  {
+    nombre: "Metropolitano",
+    imagen: "assets/images/R6593302.png",
+    paradas: "PARADAS DE BUS<br><br>🚌Terminal Naranjal<br>🚌Estacion Chimpu<br>🚌Terminal Matellini<br>🚌Plaza de Flores",
+    datos: "DATOS DE CORREDOR<br><br>Metropolitano tiene rutas de autobús que operan en todo Lima incluyendo: Miraflores, Lince, Independen, San Martin, Carabayllo, Breña, Chorrillos, Lima."
+  },
+  {
+    nombre: "Corredor Morado",
+    imagen: "assets/images/R858863.png",
+    paradas: "PARADAS DE BUS<br><br>🚌S.J.L. - Magdalena<br>🚌S.J.L. - San Isidro<br>🚌S.J.L. - Centro de Lima",
+    datos: "DATOS DE CORREDOR<br><br>Corredor Morado tiene rutas de autobús que operan en todo Lima incluyendo: San Juan D, Jesus Mari, Lima."
+  },
+  {
+    nombre: "Corredor Azul",
+    imagen: "assets/images/R861589.png",
+    paradas: "PARADAS DE BUS<br><br>🚌Rimac - Barranco<br>🚌S.J.L. - Miraflores<br>🚌Rimac - Miraflores<br>🚌Alimentador Abancaes<br>🚌Alimentador Las Lomas",
+    datos: "DATOS DE CORREDOR<br><br>Corredor Azul tiene rutas de autobús que operan en todo Lima incluyendo: Miraflores, San Juan D, Lima."
+  },
+  {
+    nombre: "Metropolitano - Alimentadores",
+    imagen: "assets/images/R882689.png",
+    paradas: "PARADAS DE BUS<br><br>🚌Tahuantinsuyo<br>🚌Naranjal<br>🚌Trapiche<br>🚌Collique<br>🚌Payet<br>🚌Belaunde<br>🚌Carabayllo<br>🚌Puente Piedra",
+    datos: "DATOS DE CORREDOR<br><br>Metropolitano - Alimentadores tiene rutas de autobús que operan en todo Lima incluyendo: Puente Pie, Carabayllo, San Martin, Comas, Los Olivos, Villa El S."
+  },
+  {
+    nombre: "Grupo Diez S.A.C",
+    imagen: "assets/images/R1110949.png",
+    paradas: "PARADAS DE BUS<br><br>🚌S.M.P. - Santiago de Surco",
+    datos: "DATOS DE CORREDOR<br><br>El autobús ruta comienza en Pacasmayo y termina en Upc Monterrico."
+  },
+  {
+    nombre: "Transporte y Servicio La Esperanza S.A.",
+    imagen: "assets/images/R10271.png",
+    paradas: "PARADAS DE BUS<br><br>🚌Callao - La Punta<br>🚌La Q",
+    datos: "DATOS DE CORREDOR<br><br>La línea más larga de Transportes y Servicios La Esperanza S.A. es la UCL03. El autobús ruta comienza en Zela y termina en Avenida Bertello. "
+  },
+  {
+    nombre: "Consorcio S4",
+    imagen: "assets/images/R858787.png",
+    paradas: "PARADAS DE BUS<br><br>🚌Huaytapampa<br>🚌Loza/Alca<br>🚌Jr Alca<br>🚌Jose Gabriel<br>🚌San Francisco",
+    datos: "DATOS DE CORREDOR<br><br>La primera parada de la línea CR53 de autobús es Huaytapampa y la última parada es Contisuyo. La línea CR53 (Independencia - San Miguel) está operativa los todos los días."
+  },
+  {
+    nombre: "Virgen de la Asuncion S.A.",
+    imagen: "assets/images/R858863.png",
+    paradas: "PARADAS DE BUS<br><br>🚌Ate - S.M.P.",
+    datos: "DATOS DE CORREDOR<br><br>Virgen de la Asunción S.A. tiene rutas de autobús que operan en todo Lima incluyendo: Ate, Santa Anit."
+  }
+];
+
+function renderRutas(filtro = "") {
+  const lista = document.getElementById("rutas-lista");
+  lista.innerHTML = "";
+  rutas.filter(r => r.nombre.toLowerCase().includes(filtro.toLowerCase()))
+    .forEach((ruta, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "ruta-btn";
+      btn.innerHTML = `<span style='font-weight:bold;'>${ruta.nombre}</span>`;
+      btn.onclick = () => cambiarContenido(ruta.imagen, ruta.paradas, ruta.datos);
+      lista.appendChild(btn);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const buscador = document.getElementById("buscador-rutas");
+  if (buscador) {
+    buscador.addEventListener("input", function() {
+      renderRutas(this.value);
+    });
+  }
+  // Render inicial
+  renderRutas();
+});
+
+// Estilizado de los botones de rutas
+const style = document.createElement('style');
+style.innerHTML = `
+.ruta-btn {
+  background: linear-gradient(90deg, #3C4D81 60%, #111D45 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(44,44,44,0.10);
+  transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0,0.2,1);
+  min-width: 180px;
+}
+.ruta-btn:hover, .ruta-btn:focus {
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px 0 rgba(44,44,44,0.18);
+  outline: none;
+}
+#rutas-lista {
+  width: 100%;
+  justify-content: flex-start;
+}
+`;
+document.head.appendChild(style);
 
 let horarioEditando = null;
 let horarioEditandoP = null;
