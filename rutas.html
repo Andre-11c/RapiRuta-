@@ -78,15 +78,8 @@
     <h2 class="planner-title">Rutas de transporte público de Lima</h2>
 
     <div class="planner-buttons">
-      <button onclick="cambiarContenido('assets/images/R2075095.png', 'PARADAS DE BUS<br><br>🚌Ate - Callao<br>🚌Molina - San Miguel<br>🚌Ate - San Miguel', 'DATOS DE CORREDOR<br><br>Corredor Rojo tiene rutas de autobús que operan en todo Lima incluyendo: Ate, San Isidro, Lince, San Borja, Jesus Maria, San Miguel, La Molina.')">Corredor Rojo</button>
-      <button onclick="cambiarContenido('assets/images/R6593302.png', 'PARADAS DE BUS<br><br>🚌Terminal Naranjal<br>🚌Estacion Chimpu<br>🚌Terminal Matellini<br>🚌Plaza de Flores', 'DATOS DE CORREDOR<br><br>Metropolitano tiene rutas de autobús que operan en todo Lima incluyendo: Miraflores, Lince, Independen, San Martin, Carabayllo, Breña, Chorrillos, Lima.')">Metropolitano</button>
-      <button onclick="cambiarContenido('assets/images/R858863.png', 'PARADAS DE BUS<br><br>🚌S.J.L. - Magdalena<br>🚌S.J.L. - San Isidro<br>🚌S.J.L. - Centro de Lima', 'DATOS DE CORREDOR<br><br>Corredor Morado tiene rutas de autobús que operan en todo Lima incluyendo: San Juan D, Jesus Mari, Lima.')">Corredor Morado</button>
-      <button onclick="cambiarContenido('assets/images/R861589.png', 'PARADAS DE BUS<br><br>🚌Rimac - Barranco<br>🚌S.J.L. - Miraflores<br>🚌Rimac - Miraflores<br>🚌Alimentador Abancaes<br>🚌Alimentador Las Lomas', 'DATOS DE CORREDOR<br><br>Corredor Azul tiene rutas de autobús que operan en todo Lima incluyendo: Miraflores, San Juan D, Lima.')">Corredor Azul</button>
-      <button onclick="cambiarContenido('assets/images/R882689.png', 'PARADAS DE BUS<br><br>🚌Tahuantinsuyo<br>🚌Naranjal<br>🚌Trapiche<br>🚌Collique<br>🚌Payet<br>🚌Belaunde<br>🚌Carabayllo<br>🚌Puente Piedra', 'DATOS DE CORREDOR<br><br>Metropolitano - Alimentadores tiene rutas de autobús que operan en todo Lima incluyendo: Puente Pie, Carabayllo, San Martin, Comas, Los Olivos, Villa El S.')">Metropolitano - Alimentadores</button>
-      <button onclick="cambiarContenido('assets/images/R1110949.png', 'PARADAS DE BUS<br><br>🚌S.M.P. - Santiago de Surco', 'DATOS DE CORREDOR<br><br>El autobús ruta comienza en Pacasmayo y termina en Upc Monterrico.')">Grupo Diez S.A.C</button>
-      <button onclick="cambiarContenido('assets/images/R10271.png', 'PARADAS DE BUS<br><br>🚌Callao - La Punta<br>🚌La Q', 'DATOS DE CORREDOR<br><br>La línea más larga de Transportes y Servicios La Esperanza S.A. es la UCL03. El autobús ruta comienza en Zela y termina en Avenida Bertello. ')">Transporte y Servicio La Esperanza S.A.</button>
-      <button onclick="cambiarContenido('assets/images/R858787.png', 'PARADAS DE BUS<br><br>🚌Huaytapampa<br>🚌Loza/Alca<br>🚌Jr Alca<br>🚌Jose Gabriel<br>🚌San Francisco', 'DATOS DE CORREDOR<br><br>La primera parada de la línea CR53 de autobús es Huaytapampa y la última parada es Contisuyo. La línea CR53 (Independencia - San Miguel) está operativa los todos los días.')">Consorcio S4</button>
-      <button onclick="cambiarContenido('assets/images/R858863.png', 'PARADAS DE BUS<br><br>🚌Ate - S.M.P.', 'DATOS DE CORREDOR<br><br>Virgen de la Asunción S.A. tiene rutas de autobús que operan en todo Lima incluyendo: Ate, Santa Anit.')">Virgen de la Asuncion S.A.</button>
+      <input type="text" id="buscador-rutas" placeholder="Buscar ruta..." style="margin-bottom:12px; padding:8px; border-radius:6px; border:1px solid #ccc; width:100%; max-width:350px;">
+      <div id="rutas-lista" style="display:flex; flex-wrap:wrap; gap:10px;"></div>
     </div>
 
     <div class="planner-display">
